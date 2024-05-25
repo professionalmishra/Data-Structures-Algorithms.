@@ -1,0 +1,46 @@
+#Just for Taking the input for the Linked List
+import java.util.Scanner;
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class LinkedList {
+    Node head;
+
+    // Function to insert a new node at the end of the linked list
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        LinkedList list = new LinkedList();
+
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        System.out.println("Enter the elements:");
+
+        for (int i = 0; i < n; i++) {
+            int data = scanner.nextInt();
+            list.insert(data);
+        }
+
+        scanner.close();
+    }
+}
