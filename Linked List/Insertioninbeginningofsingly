@@ -1,3 +1,4 @@
+#Day 3 of DSA
 #To Insert the element in the beginning of the linked list
 
 #Create  Node class,make Function of Insertion to swap the newnode with head.next and call the function 
