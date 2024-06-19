@@ -1,0 +1,34 @@
+#To Insert the element in the beginning of the linked list
+
+#Create  Node class,make Function of Insertion to swap the newnode with head.next and call the function 
+class Node {
+    int data;
+    Node next;
+    Node(int x) {
+        data = x;
+        next = null;
+    }
+}
+
+public class Insertioninbeginningofsingly {
+    public static Node insertion(Node head, int x) {
+        Node newNode = new Node(x);
+        newNode.next = head;
+        return newNode; 
+    }
+
+    public static void main(String args[]) {
+        Node head = new Node(10);
+        head.next = new Node(20);
+        head.next.next = new Node(40);
+
+        
+        head = insertion(head, 5); 
+
+        Node current = head; 
+        while (current != null) {
+            System.out.println(current.data);
+            current = current.next;
+        }
+    }
+}
