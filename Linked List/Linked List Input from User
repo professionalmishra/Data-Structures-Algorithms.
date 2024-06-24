@@ -1,5 +1,6 @@
-#Just for Taking the input for the Linked List
-import java.util.Scanner;
+//DAY 1 of the DSA 
+// here we leanrned how to make a linked list creataion and display and to insert a node at the end of the linked list
+import java.util.Util.*;
 
 class Node {
     int data;
@@ -11,7 +12,7 @@ class Node {
     }
 }
 
-public class LinkedList {
+class LinkedList {
     Node head;
 
     // Function to insert a new node at the end of the linked list
@@ -28,6 +29,21 @@ public class LinkedList {
         }
     }
 
+    // Function to display the linked list
+    public void display() {
+        Node temp = head;
+        if(head==null){
+            System.out.println("The Linked list is empty");
+        }
+        else{
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }}
+}
+
+public class Practice {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList list = new LinkedList();
@@ -41,6 +57,10 @@ public class LinkedList {
             list.insert(data);
         }
 
-        scanner.close();
+      
+        System.out.println("The linked list is:");
+        list.display();
+
+      
     }
 }
