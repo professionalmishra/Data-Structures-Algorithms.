@@ -1,5 +1,6 @@
 #here ill provide only the method and logic
 #day 4 of DSA
+// Method for Searching a Element in a linked List
     public static int searchInLinkedList(Node head, int k)
     {
         Node temp = head;
@@ -12,3 +13,14 @@
         return 0;
     }
 
+
+// Method to count the number of nodes in the list
+public int countNodes() {
+    int count = 0;
+    Node current = head;
+    while (current != null) {
+        count++;
+        current = current.next;
+    }
+    return count;
+}
