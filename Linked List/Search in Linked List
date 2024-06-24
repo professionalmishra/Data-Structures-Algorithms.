@@ -1,0 +1,14 @@
+#here ill provide only the method and logic
+#day 4 of DSA
+    public static int searchInLinkedList(Node head, int k)
+    {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == k) {
+                return 1;
+            }
+            temp = temp.next;  // Move to the next node
+        }
+        return 0;
+    }
+
