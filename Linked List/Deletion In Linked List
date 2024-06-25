@@ -1,0 +1,88 @@
+#There are 4 types of deletion head,position
+// im just creating the method or logic you can say,we can make this to full code by combining input from the user file and call the function
+
+
+ Q1.
+//Method to  delete the head node in linked list
+    public void deleteHead(){
+        if(head!=null){
+        head=head.next;
+        }
+        else{
+            System.out.println("The linked list is empty");
+        }
+    }
+
+//Yes, traversing a linked list means you are moving from the head node through each subsequent node until you reach your target node 
+
+Q2.
+//Method to Delete the tail of the linked list
+public void DeleteTail(){
+    Node temp = head;
+    if(head==null || head.next==null){
+        System.out.println("The linked list is null");
+    }
+    while(temp.next.next!=null){
+temp=temp.next;
+    }
+    temp.next=null;
+}
+
+Q3.
+//Method to Delete the Kth element in a linked list
+public void DeleteKth(int k){
+    int count=0;
+    if(head==null){
+        System.out.println("The linked list is empty");
+        return;
+        }
+        if(k==1){
+            Node temp=head;
+            head=head.next;
+            return;
+        }
+        Node prev = head;
+        Node temp=head;
+        while(temp!=null){
+            count++;
+            if(count==k){
+                prev.next=prev.next.next;
+                break;
+                
+            }
+            prev =temp;
+            temp=temp.next;
+            return;
+        }
+}
+Q4.
+  // Function to delete the node with value el from the linked list
+  public void Kthvalue(int el) {
+
+    if (head == null) {
+        System.out.println("The linked list is empty");
+        return;
+    }
+
+    
+    if (head.data == el) {
+        head = head.next;
+        return;
+    }
+
+    Node temp = head;
+    Node prev = null;
+
+    while (temp != null) {
+        if (temp.data == el) {
+            
+        prev.next = prev.next.next; 
+        
+            return ;
+        }
+        prev = temp;
+        temp = temp.next;
+    }
+
+    return ;
+}
